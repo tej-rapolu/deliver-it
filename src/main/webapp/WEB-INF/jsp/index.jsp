@@ -2,7 +2,7 @@
 <html lang="en">
 
 <body>
-    <h1>${message}</h1>
+    <h1>The default message from the application is ${message}</h1>
 </body>
 
 </html>

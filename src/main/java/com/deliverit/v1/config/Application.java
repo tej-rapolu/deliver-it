@@ -1,19 +1,25 @@
 package com.deliverit.v1.config;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import org.springframework.web.servlet.view.JstlView;
 
-@SpringBootApplication
-public class Application extends SpringBootServletInitializer {
+@Configuration
+@EnableWebMvc
+@ComponentScan(basePackages = "com.deliverit.v1")
+public class Application {
 
-  @Override
-  protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-    return application.sources(Application.class);
-  }
+  @Bean
+  public ViewResolver viewResolver() {
+    InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+    viewResolver.setViewClass(JstlView.class);
+    viewResolver.setPrefix("/WEB-INF/jsp/");
+    viewResolver.setSuffix(".jsp");
 
-  public static void main(String[] args) {
-    SpringApplication.run(Application.class, args);
+    return viewResolver;
   }
 }

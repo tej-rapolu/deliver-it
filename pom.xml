@@ -70,5 +70,17 @@
     </pluginManagement>
     <finalName>Spring4MVCHelloWorldNoXMLDemo</finalName>
   </build>
-
+  <distributionManagement>
+    <repository>
+      <id>nexus</id>
+      <name>release repo</name>
+      <url>http://ec2-34-210-80-185.us-west-2.compute.amazonaws.com:8081/repository/schoolman-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>nexus</id>
+      <name>snapshot repo</name>
+      <url>http://ec2-34-210-80-185.us-west-2.compute.amazonaws.com:8081/repository/schoolman-snapshots/</url>
+      <uniqueVersion>false</uniqueVersion>
+    </snapshotRepository>
+  </distributionManagement>
 </project>

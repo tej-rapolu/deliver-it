@@ -59,7 +59,13 @@
       </plugin>
     </plugins>
   </reporting>
-
+  <distributionManagement>
+    <repository>
+      <id>nexus</id>
+      <name>Nexus Release Repo</name>
+      <url>http://ec2-52-38-102-28.us-west-2.compute.amazonaws.com:8081/repository/schoolman-releases/</url>
+    </repository>
+  </distributionManagement>
 
   <build>
     <pluginManagement>

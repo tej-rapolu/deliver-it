@@ -67,6 +67,12 @@
     </repository>
   </distributionManagement>
 
+  <scm>
+    <url>https://github.com/Sathyvs/deliver-it</url>
+    <connection>scm:git:git@github.com:Sathyvs/deliver-it.git</connection>
+    <developerConnection>scm:git:git@github.com:Sathyvs/deliver-it.git</developerConnection>
+  </scm>
+
   <build>
     <pluginManagement>
       <plugins>

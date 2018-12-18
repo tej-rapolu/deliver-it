@@ -10,7 +10,7 @@
   <packaging>war</packaging>
 
   <properties>
-    <springframework.version>4.0.6.RELEASE</springframework.version>
+    <springframework.version>4.3.16.RELEASE</springframework.version>
   </properties>
 
   <dependencies>
@@ -37,10 +37,28 @@
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
-      <dependency>
+    <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
       <version>23.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.atlassian.oai</groupId>
+      <artifactId>swagger-request-validator-springmvc</artifactId>
+      <version>2.1.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger2</artifactId>
+      <version>2.9.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger-ui</artifactId>
+      <version>2.9.2</version>
     </dependency>
 
     <dependency>
@@ -49,6 +67,18 @@
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.5</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.25</version>
+    </dependency>
+
   </dependencies>
   <reporting>
     <plugins>
@@ -98,6 +128,17 @@
         </plugin>
       </plugins>
     </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
     <finalName>Spring4MVCHelloWorldNoXMLDemo</finalName>
   </build>
+
 </project>

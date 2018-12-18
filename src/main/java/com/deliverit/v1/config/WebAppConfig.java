@@ -1,5 +1,7 @@
 package com.deliverit.v1.config;
 
+import com.atlassian.oai.validator.springmvc.OpenApiValidationFilter;
+import javax.servlet.Filter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class WebAppConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
@@ -17,5 +19,13 @@ public class WebAppConfig extends AbstractAnnotationConfigDispatcherServletIniti
   @Override
   protected String[] getServletMappings() {
     return new String[]{"/"};
+  }
+
+  @Override
+  protected Filter[] getServletFilters() {
+    return new Filter[] { new OpenApiValidationFilter(
+        true, // enable request validation
+        true  // enable response validation
+    ) };
   }
 }

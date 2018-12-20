@@ -27,6 +27,9 @@ public class IndexController {
         return "index";
     }
 
+    /**
+    * Post method for validating Spring swagger validation
+    */
     @RequestMapping(value = "/v1/pets", method = RequestMethod.POST)
     public String postPets(ModelMap model) {
         model.addAttribute("greeting", "Hello World Again, Thank you for your pet !!");

@@ -4,6 +4,9 @@ import com.atlassian.oai.validator.springmvc.OpenApiValidationFilter;
 import javax.servlet.Filter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+/**
+ * Web App Config.
+ */
 public class WebAppConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
 
   @Override

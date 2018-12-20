@@ -19,7 +19,7 @@ public class Application {
     viewResolver.setViewClass(JstlView.class);
     viewResolver.setPrefix("/WEB-INF/jsp/");
     viewResolver.setSuffix(".jsp");
-
+    System.out.println("Im the master");
     return viewResolver;
   }
 }
